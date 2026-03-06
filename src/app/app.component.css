@@ -1,0 +1,43 @@
+.calendar {
+  font-family: Arial;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  margin-left: 150px;
+}
+
+.day {
+  width: 40px;
+  text-align: center;
+  font-size: 12px;
+  border-left: 1px solid #eee;
+}
+
+.row {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #eee;
+}
+
+.project-name {
+  width: 150px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.timeline {
+  position: relative;
+  flex: 1;
+}
+
+.event {
+  position: absolute;
+  height: 28px;
+  border-radius: 20px;
+  color: white;
+  font-size: 12px;
+  padding: 4px 10px;
+  top: 10px;
+}
