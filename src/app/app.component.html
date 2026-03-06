@@ -1,31 +1,13 @@
-<div class="calendar">
+<div style="margin-bottom:20px">
 
-  <div class="header">
-    <div class="day" *ngFor="let day of days">
-      {{ day | date:'d' }}
-    </div>
-  </div>
+  <label>Project:</label>
 
-  <div class="row" *ngFor="let project of projects">
-
-    <div class="project-name">
-      {{project.name}}
-    </div>
-
-    <div class="timeline">
-
-      <div
-        class="event"
-        *ngFor="let event of project.events"
-        [ngStyle]="getEventStyle(event)"
-        (mousedown)="startDrag($event, event)"
-      >
-        {{event.title}}
-      </div>
-
-    </div>
-
-  </div>
+<select #projectSelect (change)="changeProject(projectSelect.value)">
+  <option value="projectA">Project A</option>
+  <option value="projectB">Project B</option>
+</select>
 
 </div>
+
+<full-calendar [options]="calendarOptions"></full-calendar>
 <router-outlet></router-outlet>
